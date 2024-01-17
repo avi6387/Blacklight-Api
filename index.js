@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 const dbConfig = {
-  host: '127.0.0.1',
+  host: 'localhost',
   user: 'root',
   password: 'Avinash@6387',
   database: 'leaderboard',
