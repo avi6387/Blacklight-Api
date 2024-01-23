@@ -18,7 +18,7 @@ app.get('/current-week-leaderboard', (req, res) => {
     SELECT UID, Name, Score, Country, TimeStamp,
       DENSE_RANK() OVER (ORDER BY Score DESC) AS \`Rank\`
     FROM leaderboard
-    WHERE WEEK(TimeStamp) = WEEK(NOW())
+    WHERE WEEK(TimeStamp) = WEEK(TimeStamp)
     ORDER BY Score DESC
     LIMIT 200`;
 
